@@ -14,21 +14,20 @@ Before running ForestAlign, please install the following libraries:
 
 ### Core Dependencies
 These libraries are required for both the Coarse and Fine Alignment steps:
-- `open3d==0.17.0`
-- `numpy==1.24.3`
-- `matplotlib==3.7.1`
-- `scipy==1.11.1`
-- `scikit-learn==1.2.2`
-- `hdbscan==0.8.29`
-- `networkx==3.1`
+- `open3d>=0.17.0`
+- `numpy>=1.24.3`
+- `matplotlib>=3.7.1`
+- `scipy>=1.11.1`
+- `scikit-learn>=1.2.2`
+- `hdbscan>=0.8.29`
+- `networkx>=3.1`
 
 ### Additional Libraries for Coarse Alignment
-- `rasterio==1.3.8`
+- `rasterio>=1.3.8`
 
 ### Additional Libraries for Fine Alignment
-- `statsmodels==0.14.0`
-- `shapely==2.0.1`
-- `seaborn==0.12.2`
+- `statsmodels>=0.14.0`
+- `shapely>=2.0.1`
 
 ## Usage
 After installing the required libraries, you can run the algorithm by following the instructions in the Jupyter Notebook files for each alignment stage. 
@@ -36,4 +35,5 @@ After installing the required libraries, you can run the algorithm by following 
 For further details on each stage, refer to the comments and documentation provided within the notebook files.
 
 ## License
+## Citation
 
