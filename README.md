@@ -51,3 +51,17 @@ ForAlign has been tested in the following environment:
 If you experience any issues, consider using the tested versions above.
 
 ---
+
+## **Datasets**
+To complement publicly available forest point cloud datasets, we provide two **real-world TLS and DLS datasets** collected in Japanese plantation forests, along with **three synthetic datasets**.  
+Each dataset contains TLS and DLS point clouds of the same forest scene.  
+
+The synthetic datasets were generated using:
+- **[Arbaro](https://github.com/wdiestel/arbaro)** for simulating 3D tree models.
+- **[Blender](https://www.blender.org/)** for constructing 3D forest environments.
+- **[Helios++](https://github.com/3dgeo-heidelberg/helios)** for LiDAR simulation.
+
+To access the datasets, please fill out the following [survey form](https://docs.google.com/forms/d/e/1FAIpQLSeCLMzWzCvZ4l-i3MPGoaAbRbye_4djHRF8Xr-QXa2coF7WCQ/viewform?usp=dialog).
+
+---
+
