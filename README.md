@@ -1,4 +1,5 @@
 # **ForAlign: A TLS-DLS Forest Point Cloud Registration Algorithm**
+![ForAlign Overview](image/foralign.png)
 
 ForAlign is a Python-based algorithm designed for automated registration of **terrestrial laser scanning (TLS)** and **drone laser scanning (DLS)** point clouds in forest environments. The algorithm leverages structural features for robust alignment and operates within a **Jupyter Notebook** environment, primarily utilizing the [Open3D library](https://github.com/isl-org/Open3D).  
 
