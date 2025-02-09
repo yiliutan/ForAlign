@@ -1,39 +1,53 @@
-# ForestAlign: A TLS-DLS Forest Point Cloud Registration Algorithm
+# **ForAlign: A TLS-DLS Forest Point Cloud Registration Algorithm**
 
-ForestAlign is a Python-based algorithm designed for automated registration of forest point clouds from terrestrial and drone platforms using structural features. The project is provided as a Jupyter Notebook and mainly relies on the [Open3D library](https://github.com/isl-org/Open3D). For compatibility, please use Python **3.8 - 3.11**.
+ForAlign is a Python-based algorithm designed for automated registration of **terrestrial laser scanning (TLS)** and **drone laser scanning (DLS)** point clouds in forest environments. The algorithm leverages structural features for robust alignment and operates within a **Jupyter Notebook** environment, primarily utilizing the [Open3D library](https://github.com/isl-org/Open3D).  
 
-## Algorithm Overview
-ForestAlign is composed of two main steps:
-1. **Coarse Alignment**: Matches the positions of trees across different platforms.
-2. **Fine Alignment**: Refines the alignment of TLS and DLS point clouds after Coarse Alignment.
+For compatibility, please use **Python 3.8 - 3.11**.
 
-Each stage is separated into individual files, allowing users to either run the full alignment process or specific steps.
+---
 
-## Installation
-Before running ForestAlign, please install the following libraries:
+## **Algorithm Overview**
+ForAlign consists of two key registration stages:  
 
-### Core Dependencies
-These libraries are required for both the Coarse and Fine Alignment steps:
-- `open3d>=0.17.0`
-- `numpy>=1.24.3`
-- `matplotlib>=3.7.1`
-- `scipy>=1.11.1`
-- `scikit-learn>=1.2.2`
-- `hdbscan>=0.8.29`
-- `networkx>=3.1`
+1. **Coarse Alignment (matching_optimization.ipynb)**: Identifies and matches trees across TLS and DLS point clouds using structural graph-based constraints.  
+2. **Fine Alignment (finetune_optimization.ipynb)**: Refines the registration by optimizing the transformation through a voxel-based point-to-mesh approach.  
 
-### Additional Libraries for Coarse Alignment
-- `rasterio>=1.3.8`
+Each stage is implemented in separate files, allowing users to execute the **full pipeline** or run specific alignment steps independently.
 
-### Additional Libraries for Fine Alignment
-- `statsmodels>=0.14.0`
-- `shapely>=2.0.1`
+Each notebook includes detailed documentation and comments to guide users through the process.
 
-## Usage
-After installing the required libraries, you can run the algorithm by following the instructions in the Jupyter Notebook files for each alignment stage. 
+**Note:** When using **Coarse Alignment**, ensure that the **Digital Terrain Model (DTM) is separated**, with TLS and DLS each containing **ground** and **off-ground** point clouds (e.g., using the [CSF](https://github.com/jianboqi/CSF) filter). The point clouds must be in **PCD format**.
 
-For further details on each stage, refer to the comments and documentation provided within the notebook files.
+---
 
-## License
-## Citation
+## **Environment**
+Before running **ForAlign**, ensure that you have the necessary dependencies installed.  
+If you encounter compatibility issues, refer to the tested versions listed below.
 
+### **Required Dependencies**  
+Install the required libraries using the following command:
+```bash
+pip install open3d==0.18.0 numpy==1.24.3 matplotlib==3.7.1 scipy==1.15.1 \
+scikit-learn==1.3.0 hdbscan==0.8.33 networkx==3.1 pulp==2.8.0 rasterio==1.3.9 pandas==2.0.3
+```
+
+### **Tested Environment & Library Versions**  
+ForAlign has been tested in the following environment:
+
+- **Python Version**: `3.11.11` (Anaconda)
+- **Operating System**: `Windows 64-bit (MSC v.1929 AMD64)`
+
+| Library        | Version |
+|---------------|---------|
+| Open3D       | 0.18.0  |
+| NumPy        | 1.24.3  |
+| SciPy        | 1.15.1  |
+| Scikit-learn | 1.3.0   |
+| HDBSCAN      | 0.8.33  |
+| PuLP         | 2.8.0   |
+| Rasterio     | 1.3.9   |
+| Pandas       | 2.0.3   |
+
+If you experience any issues, consider using the tested versions above.
+
+---
