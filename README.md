@@ -19,6 +19,9 @@ Each notebook includes detailed documentation and comments to guide users throug
 
 **Note:** When using **Coarse Alignment**, ensure that the **Digital Terrain Model (DTM) is separated**, with TLS and DLS each containing **ground** and **off-ground** point clouds (e.g., using the [CSF](https://github.com/jianboqi/CSF) filter). The point clouds must be in **PCD format**.
 
+Due to the diverse nature of forest point cloud data, we recommend adjusting parameter settings based on the specific characteristics of your dataset.  
+For detailed guidance, please refer to our published paper and the comments provided in the code files.
+
 ---
 
 ## **Environment**
